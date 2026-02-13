@@ -63,20 +63,23 @@ echo -e "${PURPLE}╔═══════════════════�
 echo -e "${PURPLE}║     🍯 Hunnypuh Archiv - Installationsassistent          ║${NC}"
 echo -e "${PURPLE}╚══════════════════════════════════════════════════════════╝${NC}"
 echo ""
-echo -e "Folgende Komponenten werden installiert:"
-echo -e "  ${CYAN}•${NC} PostgreSQL 15"
-echo -e "  ${CYAN}•${NC} Python 3.11 + FastAPI"
-echo -e "  ${CYAN}•${NC} Node.js 20 + React"
-echo -e "  ${CYAN}•${NC} Nginx"
-echo -e "  ${CYAN}•${NC} Docker & Docker Compose (optional)"
+echo "Folgende Komponenten werden installiert:"
+echo "  • PostgreSQL 15"
+echo "  • Python 3.11 + FastAPI"
+echo "  • Node.js 20 + React"
+echo "  • Nginx"
+echo "  • Docker & Docker Compose (optional)"
 echo ""
-echo -e "Installationsverzeichnis: ${YELLOW}$PROJECT_DIR${NC}"
-echo -e "Datenbank: ${YELLOW}$DB_NAME${NC}"
-echo -e "Backend Port: ${YELLOW}$BACKEND_PORT${NC}"
-echo -e "Frontend Port: ${YELLOW}$FRONTEND_PORT${NC}"
+echo "Installationsverzeichnis: $PROJECT_DIR"
+echo "Datenbank: $DB_NAME"
+echo "Backend Port: $BACKEND_PORT"
+echo "Frontend Port: $FRONTEND_PORT"
 echo ""
 read -p "Weiter mit Installation? (j/N) " -n 1 -r
 echo ""
+if [[ ! $REPLY =~ ^[Jj]$ ]]; then
+    exit 1
+fi
 if [[ ! $REPLY =~ ^[Jj]$ ]]; then
     exit 1
 fi
